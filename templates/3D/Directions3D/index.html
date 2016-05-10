@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Directions 3D</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="//jsdev.arcgis.com/4.0/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="//jsdev.arcgis.com/4.0/dgrid/css/dgrid.css">
+    <link rel="stylesheet" href="//jsdev.arcgis.com/4.0/esri/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/maneuvers.css">
+    <link rel="stylesheet" href="./js/dijit/css/MovablePane.css">
+    <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            async: true,
+            parseOnLoad: true,
+            packages: [
+                {
+                    name: "put-selector",
+                    location: package_path + "../../../../put-selector/"
+                },
+                {
+                    name: "application",
+                    location: package_path + '/js'
+                },
+                {
+                    name: "config",
+                    location: package_path + '/config'
+                },
+                {
+                    name: "arcgis_templates",
+                    location: package_path + '/..'
+                }
+            ]
+        };
+    </script>
+    <script type="text/javascript" src="//jsdev.arcgis.com/4.0/"></script>
+    <script type="text/javascript">
+        require([
+            "dojo/ready",
+            "config/templateConfig",
+            "application/template",
+            "application/main",
+            "application/dijit/MovablePane",
+            "dijit/form/ToggleButton",
+            "dijit/form/HorizontalSlider"
+        ], function (ready, templateConfig, Template, Main) {
+
+            Main.displayMessage("Welcome...");
+
+            var myTemplate = new Template(templateConfig);
+            myTemplate.startup().then(function (config) {
+                ready(function () {
+                    var myApp = new Main(config);
+                    myApp.startup();
+                }.bind(this));
+            }, Main.displayMessage);
+
+        });
+    </script>
+</head>
+<body class="claro">
+<div id="scene-node" dir="ltr">
+    <div id="directions-pane" data-dojo-type="application/dijit/MovablePane" data-dojo-props="title:'Directions',open:true">
+        <div id="directions-node"></div>
+    </div>
+    <div id="animation-pane" data-dojo-type="application/dijit/MovablePane" data-dojo-props="title:'Route',open:true">
+        <div style="text-align:center;">
+            <div id="animation-button" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="label:'Display Route',iconClass:'dijitCheckBoxIcon',disabled:true"></div>
+            <div id="options-node">
+                <span>Speed:</span>
+                <span id="speed-slider" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="minimum:1,maximum:5,discreteValues:5,value:2,showButtons:true,intermediateChanges:true"></span>
+                <span>Offset:</span>
+                <span id="offset-slider" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="minimum:1,maximum:10,discreteValues:11,value:5,showButtons:true,intermediateChanges:true"></span>
+            </div>
+        </div>
+        <div id="animation-slider" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="intermediateChanges:true,disabled:true"></div>
+        <div id="animation-scene-node" dir="ltr"></div>
+    </div>
+    <div id="details-node">Tap on the map to set stop locations, find route, and get directions</div>
+</div>
+</body>
+</html>
