@@ -1,0 +1,152 @@
+
+#directions-pane ol {
+    white-space : nowrap;
+    /*padding     : 0 40px;*/
+}
+
+#directions-pane li table {
+    white-space    : normal;
+    vertical-align : middle;
+    display        : inline-block;
+}
+
+.direction-node:first-of-type {
+    border-top : solid 1px #dfdfdf;
+}
+
+.direction-node {
+    cursor        : pointer;
+    padding       : 3px;
+    border        : dotted 1px transparent;
+    border-bottom : solid 1px #dfdfdf;
+}
+
+.direction-node:hover {
+    background-color : #f8f7ff;
+}
+
+.direction-node:active {
+    color            : #fff;
+    background-color : #467fd9;
+}
+
+.direction-selected {
+    background-color : #e6efff !important;
+}
+
+.direction-details {
+    /**/
+}
+
+.direction-other {
+    padding-left : 20px;
+    font-size    : small;
+    font-style   : italic;
+    color        : #888;
+}
+
+.maneuverImage {
+    width            : 32px;
+    height           : 32px;
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_Unknown32_d.png);
+}
+
+.esriDMTDepart {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_TripItem32_d.png);
+}
+
+.esriDMTTripItem {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_Depart32_d.png);
+}
+
+.esriDMTStop {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_Stop32_d.png);
+}
+
+.esriDMTStraight {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_Straight32_d.png);
+}
+
+.esriDMTTurnRight {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_TurnRight32_d.png);
+}
+
+.esriDMTTurnLeft {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_TurnLeft32_d.png);
+}
+
+.esriDMTSharpRight {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_SharpRight32_d.png);
+}
+
+.esriDMTSharpLeft {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_SharpLeft32_d.png);
+}
+
+.esriDMTTurnLeftLeft {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_TurnLeftLeft32_d.png);
+}
+
+.esriDMTTurnLeftRight {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_TurnLeftRight32_d.png);
+}
+
+.esriDMTTurnRightRight {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_TurnRightRight32_d.png);
+}
+
+.esriDMTTurnRightLeft {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_TurnRightLeft32_d.png);
+}
+
+.esriDMTForkRight {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_ForkRight32_d.png);
+}
+
+.esriDMTForkLeft {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_ForkLeft32_d.png);
+}
+
+.esriDMTBearLeft {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_BearLeft32_d.png);
+}
+
+.esriDMTBearRight {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_BearRight32_d.png);
+}
+
+.esriDMTRoundabout {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_Roundabout32_d.png);
+}
+
+.esriDMTForkCenter {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_ForkCenter32_d.png);
+}
+
+.esriDMTHighwayChange {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_HighwayChange32_d.png);
+}
+
+.esriDMTHighwayExit {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_HighwayExit32_d.png);
+}
+
+.esriDMTHighwayMerge {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_HighwayMerge32_d.png);
+}
+
+.esriDMTRampLeft {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_RampLeft32_d.png);
+}
+
+.esriDMTRampRight {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_RampRight32_d.png);
+}
+
+.esriDMTUTurn {
+    background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_UTurn32_d.png);
+}
+
+/*.esriDMT {
+  background-image : url(../images/maneuvers/NetworkAnalystDirectionsManeuver_);
+}*/

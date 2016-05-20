@@ -1,0 +1,175 @@
+html, body {
+    padding     : 0;
+    margin      : 0;
+    width       : 100%;
+    height      : 100%;
+    font-family : Segoe UI, Helvetica, sans-serif;
+    overflow    : hidden;
+}
+
+/* MAIN APP MESSAGES =========================================================== */
+.app-error .loading-message {
+    background  : url(../images/error.png) no-repeat top center;
+    padding-top : 60px;
+    width       : 100%;
+    position    : absolute;
+    z-index     : 2;
+    top         : 40%;
+    left        : 0;
+    text-align  : center;
+}
+
+.message-node {
+    position         : absolute;
+    top              : 30%;
+    z-index          : 99;
+    width            : 100%;
+    padding          : 40px;
+    text-align       : center;
+    font-size        : 2em;
+    background-color : rgba(70, 127, 217, 0.8);
+}
+
+.message-node .small-text {
+    padding        : 5px !important;
+    font-size      : smaller !important;
+    display        : table-cell;
+    vertical-align : middle;
+}
+
+.message-node span {
+    color       : #fff;
+    text-shadow : 1px 1px 0 #222;
+}
+
+.error-node span {
+    color : darkred;
+}
+
+/* MAIN APP MESSAGES =========================================================== */
+
+#scene-node {
+    width  : 100%;
+    height : 100%;
+}
+
+#animation-scene-node {
+    width            : 100%;
+    height           : 325px;
+    box-shadow       : 0 1px 2px rgba(0, 0, 0, 0.3);
+    background-color : rgba(255, 255, 255, 0.5);
+}
+
+#directions-pane {
+    z-index  : 99;
+    position : absolute;
+    top      : 15px;
+    right    : 15px;
+    width    : 450px;
+}
+
+#directions-node {
+    max-height : 550px;
+}
+
+#route-totals {
+    text-align  : center;
+    font-weight : bolder;
+    margin      : 10px 0;
+}
+
+#details-node {
+    pointer-events : none;
+    z-index        : 99;
+    position       : absolute;
+    bottom         : 30px;
+    left           : 0;
+    width          : 100%;
+    text-align     : center;
+    color          : #333;
+    text-shadow    : 1px 1px 0 #eee;
+    font-style     : italic;
+}
+
+#animation-pane {
+    z-index  : 99;
+    position : absolute;
+    top      : 15px;
+    left     : 60px;
+    width    : 425px;
+}
+
+#animation-pane * {
+    outline : none;
+}
+
+#offset-slider,
+#speed-slider {
+    display        : inline-block;
+    vertical-align : middle;
+    width          : 120px;
+}
+
+#animation-slider {
+    margin : 10px 0;
+}
+
+#animation-slider .dijitSliderImageHandleH {
+    top : -4px;
+}
+
+#animation-slider .dijitSliderDecrementIconH,
+#animation-slider .dijitSliderIncrementIconH {
+    height : 18px !important;
+}
+
+#animation-slider .dijitSliderBarH {
+    height : 16px;
+}
+
+#animation-pane .dijitSliderBarH {
+    border-left-width  : 1px;
+    border-right-width : 1px;
+}
+
+#animation-pane .dijitSliderBumperH {
+    width      : 4px !important;
+    visibility : hidden !important;
+}
+
+#animation-pane .dijitSlider .dijitSliderProgressBarH {
+    background : #467fd9 !important;
+}
+
+#animation-pane .dijitToggleButton .dijitButtonNode {
+    background : #467fd9 !important;
+}
+
+#animation-pane .dijitToggleButton .dijitButtonText {
+    color   : #fff !important;
+    padding : 4px;
+}
+
+#animation-pane .dijitToggleButtonDisabled .dijitButtonNode {
+    background : #ccc !important;
+}
+
+#animation-pane .dijitToggleButtonDisabled .dijitButtonText {
+    color : #999 !important;
+}
+
+#animation-pane .dijitToggleButtonActive .dijitButtonNode {
+    background : #4a99f7 !important;
+}
+
+#animation-pane.dijitToggleButton .dijitCheckBoxIcon {
+    background-position : -112px;
+}
+
+#animation-pane .dijitToggleButtonChecked .dijitCheckBoxIcon {
+    background-position : -94px;
+}
+
+#options-node {
+    margin : 5px;
+}
